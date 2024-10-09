@@ -1,4 +1,13 @@
-// Créez votre fonction ici
+function calculate(firstNumber,secondNumber,operator) {
+    const allowedOperators = ['+','-','*','/']
+    if(allowedOperators.includes(operator)){
+        if(secondNumber === Number(0)) {
+            return 'Division by zero is not allowed'
+        }
+        return eval(firstNumber + operator + secondNumber);
+    }
+    return 'Invalid operator'
+}
 
 // Exemples d'utilisation de la fonction
 console.log(calculate(5, 3, '+'));   // Affiche 8
